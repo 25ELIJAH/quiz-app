@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ef9f27" />
+    <title>Africa Quiz</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- WELCOME SCREEN -->
+    <div id="welcome-screen" class="screen active">
+      <div class="card">
+        <div class="logo">🌍</div>
+        <h1>Africa Quiz</h1>
+        <p class="subtitle">Test your knowledge about the great continent</p>
+
+        <div class="input-group">
+          <label>Your Name</label>
+          <input type="text" id="player-name" placeholder="Enter your name..." maxlength="20" />
+        </div>
+
+        <div class="input-group">
+          <label>Difficulty</label>
+          <div class="difficulty-btns">
+            <button class="diff-btn active" data-diff="easy">🟢 Easy</button>
+            <button class="diff-btn" data-diff="medium">🟡 Medium</button>
+            <button class="diff-btn" data-diff="hard">🔴 Hard</button>
+          </div>
+        </div>
+
+        <div class="difficulty-info" id="diff-info">
+          30 seconds per question • 1 point per correct answer
+        </div>
+
+        <button class="btn-primary" id="start-btn">Start Quiz →</button>
+
+        <div class="leaderboard-preview" id="leaderboard-preview"></div>
+      </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz-screen" class="screen">
+      <div class="card">
+
+        <div class="quiz-header">
+          <div class="quiz-meta">
+            <span id="question-count">Question 1/15</span>
+            <span id="score-display">Score: 0</span>
+          </div>
+          <div class="timer-bar">
+            <div class="timer-fill" id="timer-fill"></div>
+          </div>
+          <div class="timer-text" id="timer-text">30s</div>
+        </div>
+
+        <div class="question-box">
+          <p id="question-text"></p>
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <div class="feedback" id="feedback" style="display:none;"></div>
+
+        <button class="btn-primary" id="next-btn" style="display:none;">Next Question →</button>
+
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="results-screen" class="screen">
+      <div class="card">
+        <div id="results-emoji" style="font-size:56px;text-align:center;margin-bottom:8px;">🏆</div>
+        <h2 id="results-title" style="text-align:center;"></h2>
+        <p id="results-subtitle" style="text-align:center;color:#854f0b;font-size:14px;margin-bottom:1.5rem;"></p>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <p class="stat-num" id="stat-score"></p>
+            <p class="stat-label">Score</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num" id="stat-accuracy"></p>
+            <p class="stat-label">Accuracy</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-num" id="stat-grade"></p>
+            <p class="stat-label">Grade</p>
+          </div>
+        </div>
+
+        <div class="leaderboard" id="leaderboard"></div>
+
+        <div style="display:flex;gap:10px;margin-top:1rem;">
+          <button class="btn-primary" id="play-again-btn" style="flex:1;">Play Again →</button>
+          <button class="btn-secondary" id="home-btn" style="flex:1;">Home</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music Controls -->
+    <div class="music-bar" id="music-bar">
+      <span id="music-label">🎵 Loading...</span>
+      <div class="music-controls">
+        <button id="prev-btn">⏮</button>
+        <button id="mute-btn">🔊</button>
+        <button id="next-music-btn">⏭</button>
+      </div>
+    </div>
+
+    <!-- Hidden YouTube Player -->
+    <iframe id="yt-music" src="" allow="autoplay; encrypted-media" style="display:none;" width="0" height="0"></iframe>
+
+    <script src="script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+  </body>
+</html>
