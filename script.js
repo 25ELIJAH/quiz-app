@@ -28,7 +28,7 @@ const allQuestions = {
     { question: "Which lake is the largest in Africa?", options: ["Lake Tanganyika", "Lake Malawi", "Lake Chad", "Lake Victoria"], answer: "Lake Victoria", fact: "Lake Victoria is the largest lake in Africa and the second largest freshwater lake in the world!" },
     { question: "What is the capital of Nigeria?", options: ["Lagos", "Kano", "Abuja", "Ibadan"], answer: "Abuja", fact: "Abuja replaced Lagos as Nigeria's capital in 1991. It was purpose built to be a more central and neutral capital city!" },
     { question: "Which African country has the most pyramids?", options: ["Egypt", "Sudan", "Libya", "Ethiopia"], answer: "Sudan", fact: "Sudan has more ancient pyramids than Egypt! It has over 200 pyramids built by the Nubian kingdoms!" },
-    { question: "What is the smallest country in Africa?", options: ["Djibouti", "Swaziland", "Seychelles", "Seychelles"], answer: "Seychelles", fact: "Seychelles is an island nation in the Indian Ocean and is the smallest African country by both area and population!" },
+    { question: "What is the smallest country in Africa?", options: ["Djibouti", "Swaziland", "Gambia", "Seychelles"], answer: "Seychelles", fact: "Seychelles is an island nation in the Indian Ocean and is the smallest African country by both area and population!" },
     { question: "Which African country is known for the Maasai people?", options: ["Tanzania and Kenya", "Uganda", "Ethiopia", "Rwanda"], answer: "Tanzania and Kenya", fact: "The Maasai are a semi-nomadic people living across Tanzania and Kenya, famous for their distinctive culture and warrior traditions!" },
   ],
   medium: [
@@ -40,7 +40,7 @@ const allQuestions = {
     { question: "Which African country has the most official languages?", options: ["South Africa", "Cameroon", "Nigeria", "Zimbabwe"], answer: "South Africa", fact: "South Africa has 11 official languages including Zulu, Xhosa, Afrikaans, English and 7 others — the most of any country in Africa!" },
     { question: "What is the name of the ancient African trading empire that controlled gold and salt trade?", options: ["Songhai Empire", "Mali Empire", "Ghana Empire", "Ashanti Empire"], answer: "Mali Empire", fact: "The Mali Empire at its peak in the 14th century was one of the largest and wealthiest empires in the world, led by the legendary Mansa Musa!" },
     { question: "Which country was formerly known as Abyssinia?", options: ["Eritrea", "Somalia", "Ethiopia", "Djibouti"], answer: "Ethiopia", fact: "Ethiopia was known as Abyssinia for centuries. It is one of the oldest countries in the world with a history dating back over 3000 years!" },
-    { question: "Who is known as the Father of the African Nation in South Africa?", options: ["Chris Hani", "Walter Sisulu", "Oliver Tambo", "Nelson Mandela"], answer: "Nelson Mandela", fact: "Nelson Mandela is widely regarded as the Father of the Nation in South Africa for his lifelong fight against apartheid and racial injustice!" },
+    { question: "Who is known as the Father of the Nation in South Africa?", options: ["Chris Hani", "Walter Sisulu", "Oliver Tambo", "Nelson Mandela"], answer: "Nelson Mandela", fact: "Nelson Mandela is widely regarded as the Father of the Nation in South Africa for his lifelong fight against apartheid and racial injustice!" },
     { question: "Which African country has the most UNESCO World Heritage Sites?", options: ["Egypt", "Ethiopia", "South Africa", "Morocco"], answer: "Ethiopia", fact: "Ethiopia has 9 UNESCO World Heritage Sites including the Rock-Hewn Churches of Lalibela and the Simien Mountains National Park!" },
     { question: "What was the Scramble for Africa?", options: ["A gold rush in West Africa", "European colonization of Africa in the late 1800s", "A famine across Africa", "African migration to Europe"], answer: "European colonization of Africa in the late 1800s", fact: "The Scramble for Africa between 1881 and 1914 saw European powers divide and colonize almost the entire African continent at the Berlin Conference!" },
     { question: "Which African country was the first to gain independence in the 20th century?", options: ["Ghana", "Nigeria", "South Africa", "Egypt"], answer: "Egypt", fact: "Egypt gained independence from Britain in 1922, making it the first African country to gain independence in the 20th century!" },
@@ -53,10 +53,9 @@ const allQuestions = {
     { question: "Which African empire was the wealthiest in history, led by Mansa Musa?", options: ["Songhai Empire", "Mali Empire", "Ghana Empire", "Benin Empire"], answer: "Mali Empire", fact: "Mansa Musa of the Mali Empire is considered the wealthiest person in all of human history. His 1324 pilgrimage to Mecca with 60,000 people and 80 camels carrying gold literally crashed the gold market in Egypt!" },
     { question: "What was the name of the apartheid law that forced black South Africans to carry identity documents?", options: ["Group Areas Act", "Pass Laws", "Separate Amenities Act", "Bantu Education Act"], answer: "Pass Laws", fact: "The Pass Laws required black South Africans to carry passbooks at all times. Failure to produce a passbook could result in immediate arrest and imprisonment!" },
     { question: "Which Kenyan woman was the first African to win the Nobel Peace Prize?", options: ["Charity Ngilu", "Wangari Maathai", "Martha Karua", "Raila Odinga"], answer: "Wangari Maathai", fact: "Wangari Maathai won the Nobel Peace Prize in 2004 for her contribution to sustainable development, democracy and peace through the Green Belt Movement!" },
-    { question: "What is the name of the ancient library that was one of the largest in the ancient world, located in Africa?", options: ["Library of Carthage", "Library of Alexandria", "Library of Timbuktu", "Library of Memphis"], answer: "Library of Alexandria", fact: "The Library of Alexandria in Egypt was one of the largest and most significant libraries of the ancient world, housing up to 700,000 scrolls of knowledge!" },
+    { question: "What is the name of the ancient library located in Africa that was one of the largest in the ancient world?", options: ["Library of Carthage", "Library of Alexandria", "Library of Timbuktu", "Library of Memphis"], answer: "Library of Alexandria", fact: "The Library of Alexandria in Egypt was one of the largest and most significant libraries of the ancient world, housing up to 700,000 scrolls of knowledge!" },
     { question: "Which African country was the site of the Rwandan Genocide in 1994?", options: ["Burundi", "Rwanda", "DR Congo", "Uganda"], answer: "Rwanda", fact: "The Rwandan Genocide in 1994 lasted 100 days and killed between 500,000 and 800,000 Tutsi people. Rwanda has since become one of Africa's fastest growing economies!" },
     { question: "Who was the first African Secretary-General of the United Nations?", options: ["Kofi Annan", "Boutros Boutros-Ghali", "Amara Essy", "Salim Salim"], answer: "Boutros Boutros-Ghali", fact: "Boutros Boutros-Ghali of Egypt served as UN Secretary-General from 1992 to 1996. Kofi Annan of Ghana followed him from 1997 to 2006!" },
-    { question: "What is the name of the trade network that connected Africa, Europe and Asia for centuries?", options: ["Silk Road", "Trans-Saharan Trade Route", "Indian Ocean Trade Network", "All of the above"], answer: "All of the above", fact: "Africa was connected to global trade through multiple networks including the Trans-Saharan routes, the Indian Ocean trade network and later connections to Europe!" },
     { question: "Which African country has the oldest written constitution still in use?", options: ["South Africa", "Egypt", "Liberia", "Ethiopia"], answer: "Liberia", fact: "Liberia adopted its constitution in 1847 modeled on the US Constitution, making it one of the oldest republics in Africa!" },
     { question: "What was the name of the movement led by Patrice Lumumba?", options: ["Congolese National Movement", "African Liberation Front", "Congo Freedom Party", "Pan African Congress"], answer: "Congolese National Movement", fact: "Patrice Lumumba founded the Mouvement National Congolais and became the first Prime Minister of the Democratic Republic of Congo. He was assassinated in 1961!" },
     { question: "Which North African dynasty built the Alhambra palace in Spain?", options: ["Ottoman Empire", "Fatimid Caliphate", "Nasrid Dynasty", "Almohad Dynasty"], answer: "Nasrid Dynasty", fact: "The Nasrid Dynasty of North African and Moorish origin built the stunning Alhambra palace in Granada Spain between 1238 and 1358!" },
@@ -64,6 +63,7 @@ const allQuestions = {
     { question: "Which African city hosted the famous 1974 boxing match known as the Rumble in the Jungle?", options: ["Lagos", "Nairobi", "Kinshasa", "Cairo"], answer: "Kinshasa", fact: "The Rumble in the Jungle between Muhammad Ali and George Foreman took place in Kinshasa Zaire now DR Congo on October 30 1974. Ali won by knockout!" },
     { question: "What was Operation Solomon?", options: ["A military operation in Somalia", "An Israeli operation to airlift Ethiopian Jews to Israel", "A UN peacekeeping mission in Sudan", "A famine relief operation in Ethiopia"], answer: "An Israeli operation to airlift Ethiopian Jews to Israel", fact: "Operation Solomon in May 1991 airlifted 14,325 Ethiopian Jews known as Beta Israel to Israel in just 36 hours using 34 aircraft!" },
     { question: "Which African leader introduced the concept of Ujamaa?", options: ["Kwame Nkrumah", "Julius Nyerere", "Kenneth Kaunda", "Jomo Kenyatta"], answer: "Julius Nyerere", fact: "Julius Nyerere of Tanzania introduced Ujamaa meaning familyhood in Swahili, a form of African socialism that emphasized community cooperation and self reliance!" },
+    { question: "Which African country was the first to legalize same sex marriage?", options: ["South Africa", "Botswana", "Namibia", "Kenya"], answer: "South Africa", fact: "South Africa became the first African country and fifth country in the world to legalize same sex marriage in 2006!" },
   ]
 };
 
@@ -79,6 +79,7 @@ let totalTime = 30;
 let answered = false;
 let currentTrack = 0;
 let isMuted = false;
+let musicStarted = false;
 
 // ---- DIFFICULTY SETTINGS ----
 const diffSettings = {
@@ -112,17 +113,13 @@ function saveLeaderboard(name, score, diff) {
   const board = getLeaderboard();
   board.push({ name, score, diff, date: new Date().toLocaleDateString() });
   board.sort((a, b) => b.score - a.score);
-  const top10 = board.slice(0, 10);
-  localStorage.setItem('africaQuizLeaderboard', JSON.stringify(top10));
+  localStorage.setItem('africaQuizLeaderboard', JSON.stringify(board.slice(0, 10)));
 }
 
 function renderLeaderboardPreview() {
   const board = getLeaderboard();
   const container = document.getElementById('leaderboard-preview');
-  if (board.length === 0) {
-    container.innerHTML = '';
-    return;
-  }
+  if (board.length === 0) { container.innerHTML = ''; return; }
   container.innerHTML = `
     <div class="leaderboard" style="margin-top:1.2rem;">
       <h3>🏅 Top Players</h3>
@@ -158,13 +155,61 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
+// ---- MUSIC ----
+function playTrack(index) {
+  const track = playlist[index];
+  const ytFrame = document.getElementById('yt-music');
+  if (!isMuted) {
+    ytFrame.src = `https://www.youtube.com/embed/${track.id}?autoplay=1&controls=0&loop=1&playlist=${track.id}`;
+  }
+  document.getElementById('music-label').textContent = `🎵 ${track.title}`;
+}
+
+document.getElementById('play-music-btn').addEventListener('click', function() {
+  if (!musicStarted) {
+    musicStarted = true;
+    this.textContent = '⏸';
+    playTrack(currentTrack);
+  } else {
+    isMuted = !isMuted;
+    if (isMuted) {
+      document.getElementById('yt-music').src = '';
+      this.textContent = '▶️';
+      document.getElementById('music-label').textContent = '🎵 Music paused';
+    } else {
+      playTrack(currentTrack);
+      this.textContent = '⏸';
+    }
+  }
+});
+
+document.getElementById('next-music-btn').addEventListener('click', function() {
+  currentTrack = (currentTrack + 1) % playlist.length;
+  playTrack(currentTrack);
+});
+
+document.getElementById('prev-btn').addEventListener('click', function() {
+  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+  playTrack(currentTrack);
+});
+
+document.getElementById('mute-btn').addEventListener('click', function() {
+  isMuted = !isMuted;
+  const ytFrame = document.getElementById('yt-music');
+  if (isMuted) {
+    ytFrame.src = '';
+    this.textContent = '🔇';
+    document.getElementById('music-label').textContent = '🎵 Music muted';
+  } else {
+    playTrack(currentTrack);
+    this.textContent = '🔊';
+  }
+});
+
 // ---- START QUIZ ----
 document.getElementById('start-btn').addEventListener('click', function() {
   const name = document.getElementById('player-name').value.trim();
-  if (!name) {
-    alert('Please enter your name!');
-    return;
-  }
+  if (!name) { alert('Please enter your name!'); return; }
   playerName = name;
   questions = shuffle(allQuestions[difficulty]).slice(0, 15);
   currentQuestion = 0;
@@ -172,7 +217,6 @@ document.getElementById('start-btn').addEventListener('click', function() {
   answered = false;
   showScreen('quiz-screen');
   loadQuestion();
-  startMusic();
 });
 
 // ---- LOAD QUESTION ----
@@ -187,21 +231,17 @@ function loadQuestion() {
   document.getElementById('feedback').style.display = 'none';
   document.getElementById('next-btn').style.display = 'none';
 
-  // Render options
   const optionsEl = document.getElementById('options');
-  const shuffledOptions = shuffle(q.options);
-  optionsEl.innerHTML = shuffledOptions.map(opt => `
+  optionsEl.innerHTML = shuffle(q.options).map(opt => `
     <button class="option" data-answer="${opt}">${opt}</button>
   `).join('');
 
-  // Add click listeners
   document.querySelectorAll('.option').forEach(btn => {
     btn.addEventListener('click', function() {
       if (!answered) selectAnswer(this.dataset.answer);
     });
   });
 
-  // Start timer
   timeLeft = settings.time;
   totalTime = settings.time;
   updateTimerBar();
@@ -209,10 +249,7 @@ function loadQuestion() {
   timer = setInterval(() => {
     timeLeft--;
     updateTimerBar();
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      timeUp();
-    }
+    if (timeLeft <= 0) { clearInterval(timer); timeUp(); }
   }, 1000);
 }
 
@@ -221,35 +258,26 @@ function updateTimerBar() {
   const pct = (timeLeft / totalTime) * 100;
   document.getElementById('timer-fill').style.width = pct + '%';
   document.getElementById('timer-text').textContent = timeLeft + 's';
-
-  // Change color when low
   const fill = document.getElementById('timer-fill');
-  if (pct < 30) {
-    fill.style.background = 'linear-gradient(90deg, #e24b4a, #991f1f)';
-  } else if (pct < 60) {
-    fill.style.background = 'linear-gradient(90deg, #ef9f27, #ba7517)';
-  } else {
-    fill.style.background = 'linear-gradient(90deg, #ef9f27, #d85a30)';
-  }
+  if (pct < 30) fill.style.background = 'linear-gradient(90deg, #e24b4a, #991f1f)';
+  else if (pct < 60) fill.style.background = 'linear-gradient(90deg, #ef9f27, #ba7517)';
+  else fill.style.background = 'linear-gradient(90deg, #ef9f27, #d85a30)';
 }
 
 // ---- SELECT ANSWER ----
 function selectAnswer(selected) {
   answered = true;
   clearInterval(timer);
-
   const q = questions[currentQuestion];
   const correct = q.answer;
   const isCorrect = selected === correct;
 
-  // Highlight options
   document.querySelectorAll('.option').forEach(btn => {
     btn.classList.add('disabled');
     if (btn.dataset.answer === correct) btn.classList.add('correct');
     if (btn.dataset.answer === selected && !isCorrect) btn.classList.add('wrong');
   });
 
-  // Show feedback
   const feedback = document.getElementById('feedback');
   feedback.style.display = 'block';
 
@@ -274,19 +302,16 @@ function selectAnswer(selected) {
 function timeUp() {
   answered = true;
   const q = questions[currentQuestion];
-
   document.querySelectorAll('.option').forEach(btn => {
     btn.classList.add('disabled');
     if (btn.dataset.answer === q.answer) btn.classList.add('correct');
   });
-
   const feedback = document.getElementById('feedback');
   feedback.style.display = 'block';
   feedback.innerHTML = `
     <p class="feedback-wrong">⏱ Time's up! The correct answer was: <strong>${q.answer}</strong></p>
     <p class="feedback-fact">💡 ${q.fact}</p>
   `;
-
   document.getElementById('next-btn').style.display = 'block';
 }
 
@@ -309,12 +334,12 @@ function endGame() {
   const pct = Math.round((score / maxScore) * 100);
 
   let grade, emoji, title;
-  if (pct >= 90) { grade = 'A+'; emoji = '🏆'; title = `Legendary! You know Africa!`; }
+  if (pct >= 90)      { grade = 'A+'; emoji = '🏆'; title = `Legendary! You know Africa!`; }
   else if (pct >= 80) { grade = 'A';  emoji = '🥇'; title = `Excellent, ${playerName}!`; }
   else if (pct >= 70) { grade = 'B';  emoji = '🥈'; title = `Great job, ${playerName}!`; }
   else if (pct >= 60) { grade = 'C';  emoji = '🥉'; title = `Good effort, ${playerName}!`; }
   else if (pct >= 40) { grade = 'D';  emoji = '📚'; title = `Keep learning, ${playerName}!`; }
-  else               { grade = 'F';  emoji = '💪'; title = `Don't give up, ${playerName}!`; }
+  else                { grade = 'F';  emoji = '💪'; title = `Don't give up, ${playerName}!`; }
 
   document.getElementById('results-emoji').textContent = emoji;
   document.getElementById('results-title').textContent = title;
@@ -342,43 +367,6 @@ document.getElementById('home-btn').addEventListener('click', function() {
   clearInterval(timer);
   renderLeaderboardPreview();
   showScreen('welcome-screen');
-});
-
-// ---- MUSIC ----
-function startMusic() {
-  playTrack(currentTrack);
-}
-
-function playTrack(index) {
-  const track = playlist[index];
-  const ytFrame = document.getElementById('yt-music');
-  if (!isMuted) {
-    ytFrame.src = `https://www.youtube.com/embed/${track.id}?autoplay=1&controls=0&loop=1`;
-  }
-  document.getElementById('music-label').textContent = `🎵 ${track.title}`;
-}
-
-document.getElementById('next-music-btn').addEventListener('click', function() {
-  currentTrack = (currentTrack + 1) % playlist.length;
-  playTrack(currentTrack);
-});
-
-document.getElementById('prev-btn').addEventListener('click', function() {
-  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
-  playTrack(currentTrack);
-});
-
-document.getElementById('mute-btn').addEventListener('click', function() {
-  isMuted = !isMuted;
-  const ytFrame = document.getElementById('yt-music');
-  if (isMuted) {
-    ytFrame.src = '';
-    this.textContent = '🔇';
-    document.getElementById('music-label').textContent = '🎵 Music muted';
-  } else {
-    playTrack(currentTrack);
-    this.textContent = '🔊';
-  }
 });
 
 // ---- INIT ----
