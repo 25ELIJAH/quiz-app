@@ -1,16 +1,9 @@
 // ---- PLAYLIST ----
 const playlist = [
-  { id: 'CcN1BHjFdz4', title: 'Wizkid - Essence' },
-  { id: 'E6BhWnMjQ64', title: 'Sauti Sol - Melanin' },
-  { id: 'fRh_vgS2dFE', title: 'Master KG - Jerusalema' },
-  { id: 'hHmaoGmGSLI', title: 'Burna Boy - Last Last' },
-  { id: 'JhqhFmPnTUQ', title: 'Sarkodie - Adonai' },
-  { id: 'EdEn0SOHLHQ', title: 'Nyashinski - Now You Know' },
-  { id: 'SFpbLLrpGVA', title: 'Black Sherif - Kweku The Traveller' },
-  { id: 'tQ4s9ghKnSQ', title: 'Davido - Fall' },
-  { id: 'iHK1RioVkPc', title: 'Nasty C - Strings and Bling' },
-  { id: 'XX_TIgIDHBo', title: 'Stonebwoy - Nominate' },
-];
+  { url: 'https://www.bensound.com/bensound-music/bensound-africa.mp3', title: 'African Vibes' },
+  { url: 'https://www.bensound.com/bensound-music/bensound-moose.mp3', title: 'African Rhythm' },
+  { url: 'https://www.bensound.com/bensound-music/bensound-relaxing.mp3', title: 'Chill Africa' },
+]
 
 // ---- QUESTIONS ----
 const allQuestions = {
@@ -156,30 +149,41 @@ function shuffle(array) {
 }
 
 // ---- MUSIC ----
+// ---- MUSIC ----
+const audioPlayer = new Audio();
+audioPlayer.loop = false;
+audioPlayer.volume = 0.3;
+
 function playTrack(index) {
   const track = playlist[index];
-  const ytFrame = document.getElementById('yt-music');
-  if (!isMuted) {
-    ytFrame.src = `https://www.youtube.com/embed/${track.id}?autoplay=1&controls=0&loop=1&playlist=${track.id}`;
-  }
-  document.getElementById('music-label').textContent = `🎵 ${track.title}`;
+  audioPlayer.src = track.url;
+  audioPlayer.play().then(() => {
+    document.getElementById('music-label').textContent = `🎵 ${track.title}`;
+    document.getElementById('play-music-btn').textContent = '⏸';
+  }).catch(err => {
+    document.getElementById('music-label').textContent = '🎵 Tap play to start music';
+    console.log('Autoplay blocked:', err);
+  });
 }
 
+// When track ends play next automatically
+audioPlayer.addEventListener('ended', function() {
+  currentTrack = (currentTrack + 1) % playlist.length;
+  playTrack(currentTrack);
+});
+
 document.getElementById('play-music-btn').addEventListener('click', function() {
-  if (!musicStarted) {
-    musicStarted = true;
+  if (audioPlayer.paused) {
+    audioPlayer.play();
     this.textContent = '⏸';
-    playTrack(currentTrack);
-  } else {
-    isMuted = !isMuted;
-    if (isMuted) {
-      document.getElementById('yt-music').src = '';
-      this.textContent = '▶️';
-      document.getElementById('music-label').textContent = '🎵 Music paused';
-    } else {
+    document.getElementById('music-label').textContent = `🎵 ${playlist[currentTrack].title}`;
+    if (!audioPlayer.src || audioPlayer.src === window.location.href) {
       playTrack(currentTrack);
-      this.textContent = '⏸';
     }
+  } else {
+    audioPlayer.pause();
+    this.textContent = '▶️';
+    document.getElementById('music-label').textContent = '🎵 Music paused';
   }
 });
 
@@ -195,15 +199,8 @@ document.getElementById('prev-btn').addEventListener('click', function() {
 
 document.getElementById('mute-btn').addEventListener('click', function() {
   isMuted = !isMuted;
-  const ytFrame = document.getElementById('yt-music');
-  if (isMuted) {
-    ytFrame.src = '';
-    this.textContent = '🔇';
-    document.getElementById('music-label').textContent = '🎵 Music muted';
-  } else {
-    playTrack(currentTrack);
-    this.textContent = '🔊';
-  }
+  audioPlayer.muted = isMuted;
+  this.textContent = isMuted ? '🔇' : '🔊';
 });
 
 // ---- START QUIZ ----
